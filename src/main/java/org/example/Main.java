@@ -1,28 +1,31 @@
 package org.example;
 
+import java.time.LocalDate;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new scanner(system);
+        Scanner sc = new Scanner(System.in);
 
         // Información general
         String nombreProgramador, correo, ciudad, pais, tipoContrato, nivelExperiencia, cliente1, cliente2, cliente3;
-        int edad, aniosExperiencia;
+        int edad, añosExperiencia;
         double tarifaBase, tarifaNivel, tarifaExperiencia;
 
         // Entrada de información general
-        System.out.print"Ingrese el nombre del programador: ");
-        nombreProgramador = sc.nextline()
+        System.out.print ("Ingrese el nombre del programador: ");
+        nombreProgramador = sc.nextLine();
 
-        System.out.print("Ingrese el correo electrónico: ")
-        correo = scanner.nextLine();
+        System.out.print("Ingrese el correo electrónico: ");
+        correo = sc.nextLine();
 
         System.out.print("Ingrese la ciudad: ");
-        ciudad = leer.nextLine();
+        ciudad = sc.nextLine();
 
-        System.out.print("Ingrese el país: ")
+        System.out.print("Ingrese el país: ");
         pais = sc.nextLine();
 
-        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ")
+        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ");
         tipoContrato = sc.nextLine();
 
         System.out.print("Ingrese el nivel de experiencia (Junior/Senior): ");
@@ -32,25 +35,25 @@ public class Main {
         edad = sc.nextInt();
 
         System.out.print("Ingrese los años de experiencia: ");
-        aniosExperiencia = sc.nextInt();
+        añosExperiencia = sc.nextInt();
 
         // Ajuste de tarifa según experiencia
-        tarifaBase = 50,0,0; // base por hora
+        tarifaBase = 50; // base por hora
         tarifaNivel = (nivelExperiencia.equalsIgnoreCase("Senior")) ? 20 : 0;
-        tarifaExperiencia = aniosExperiencia * 1.5;
+        tarifaExperiencia = añosExperiencia * 1.5;
         double tarifaHoraFinal = tarifaBase + tarifaNivel + tarifaExperiencia;
 
-        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal)
+        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal);;
 
         // Información de proyectos
         System.out.println("\nIngrese los nombres de los 3 clientes:");
         sc.nextLine(); // limpiar buffer
-        System.out.print("Cliente 1: ")
-        cliente1 = sc.nex();
-        System.out.print("Cliente 2: ")
+        System.out.print("Cliente 1: ");
+        cliente1 = sc.next();
+        System.out.print("Cliente 2: ");
         cliente2 = sc.next();
-        System.out.print("Cliente 3: ")
-        cliente3 = sc.nex();
+        System.out.print("Cliente 3: ");
+        cliente3 = sc.next();
 
         int horasProyecto1, horasProyecto2, horasProyecto3;
         double bonusCliente1, bonusCliente2, bonusCliente3;
@@ -74,11 +77,11 @@ public class Main {
         bonusCliente3 = sc.nextDouble();
 
         // Cálculos de pago por proyecto
-        pagoProyecto1 = (horasProyec1 * tarifaHoraFinal) + bonusCliene1;
-        pagoProyecto2 = (horasProyecto2 * tarifaHoraFnal) + bonusCliene2;
-        pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliene3;
+        pagoProyecto1 = ( tarifaHoraFinal + bonusCliente1);
+        pagoProyecto2 = ( tarifaHoraFinal + bonusCliente2);
+        pagoProyecto3 = ( tarifaHoraFinal + bonusCliente3);
 
-        subtotal ==== pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
+        subtotal = pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
 
         // Operaciones adicionales
         descuentos = subtotal * 0.03; // 3% de fondo de ahorro
