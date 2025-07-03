@@ -1,0 +1,21 @@
+# 💻 Sistema de Liquidación para Programadores Freelance 🧾✨
+
+Este programa en Java permite calcular la tarifa final por hora de un programador freelance y su liquidación total teniendo en cuenta experiencia, clientes y bonos adicionales.
+
+## 🛠 Errores encontrados y corregidos
+
+| Línea original (error) | Corrección aplicada |
+|------------------------|---------------------|
+| `Scanner sc = new scanner(system);` | `Scanner sc = new Scanner(System.in);` – Se corrigió el uso incorrecto de clases. |
+| `System.out.print"Ingrese el nombre...` | Se agregó paréntesis faltante: `System.out.print(...);` |
+| `nombreProgramador = sc.nextline()` | Se corrigió el método: `nextLine()` con paréntesis. |
+| `correo = scanner.nextLine();` | Cambiado a `sc.nextLine();` para mantener consistencia. |
+| `ciudad = leer.nextLine();` | Cambiado a `sc.nextLine();`. |
+| `tarifaBase = 50,0,0;` | Reemplazado por `tarifaBase = 50.0;` |
+| `sc.nex()` | Corregido a `sc.nextLine();` |
+| `subtotal ==== ...` | Reemplazado por `subtotal = ...` |
+| Variables mal escritas como `bonusCliene1` | Corregidas a `bonusCliente1`, etc. |
+| Líneas comentadas innecesarias | Descomentadas para permitir el ingreso de datos correctamente. |
+
+
+
