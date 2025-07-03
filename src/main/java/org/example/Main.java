@@ -1,8 +1,10 @@
 package org.example;
 
+import java.time.LocalDate;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new scanner(system);
+        Scanner sc = new Scanner(System.in);
 
         // Información general
         String nombreProgramador, correo, ciudad, pais, tipoContrato, nivelExperiencia, cliente1, cliente2, cliente3;
@@ -10,19 +12,19 @@ public class Main {
         double tarifaBase, tarifaNivel, tarifaExperiencia;
 
         // Entrada de información general
-        System.out.print"Ingrese el nombre del programador: ");
-        nombreProgramador = sc.nextline()
+        System.out.print("Ingrese el nombre del programador: ");
+        nombreProgramador = sc.nextLine();
 
-        System.out.print("Ingrese el correo electrónico: ")
-        correo = scanner.nextLine();
+        System.out.print("Ingrese el correo electrónico: ");
+        correo = sc.nextLine();
 
         System.out.print("Ingrese la ciudad: ");
-        ciudad = leer.nextLine();
+        ciudad = sc.nextLine();
 
-        System.out.print("Ingrese el país: ")
+        System.out.print("Ingrese el país: ");
         pais = sc.nextLine();
 
-        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ")
+        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ");
         tipoContrato = sc.nextLine();
 
         System.out.print("Ingrese el nivel de experiencia (Junior/Senior): ");
@@ -31,28 +33,29 @@ public class Main {
         System.out.print("Ingrese la edad del programador: ");
         edad = sc.nextInt();
 
+
         System.out.print("Ingrese los años de experiencia: ");
         aniosExperiencia = sc.nextInt();
 
         // Ajuste de tarifa según experiencia
-        tarifaBase = 50,0,0; // base por hora
+        tarifaBase = 50.00; // base por hora
         tarifaNivel = (nivelExperiencia.equalsIgnoreCase("Senior")) ? 20 : 0;
         tarifaExperiencia = aniosExperiencia * 1.5;
         double tarifaHoraFinal = tarifaBase + tarifaNivel + tarifaExperiencia;
 
-        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal)
+        System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal);
 
         // Información de proyectos
         System.out.println("\nIngrese los nombres de los 3 clientes:");
         sc.nextLine(); // limpiar buffer
-        System.out.print("Cliente 1: ")
-        cliente1 = sc.nex();
-        System.out.print("Cliente 2: ")
-        cliente2 = sc.next();
-        System.out.print("Cliente 3: ")
-        cliente3 = sc.nex();
+        System.out.print("Cliente 1: ");
+        cliente1 = sc.nextLine();
+        System.out.print("Cliente 2: ");
+        cliente2 = sc.nextLine();
+        System.out.print("Cliente 3: ");
+        cliente3 = sc.nextLine();
 
-        int horasProyecto1, horasProyecto2, horasProyecto3;
+        int horasProyecto1 =10, horasProyecto2 = 15, horasProyecto3 =20;
         double bonusCliente1, bonusCliente2, bonusCliente3;
         double pagoProyecto1, pagoProyecto2, pagoProyecto3;
         double subtotal, descuentos, impuestos, totalFinal;
@@ -74,11 +77,11 @@ public class Main {
         bonusCliente3 = sc.nextDouble();
 
         // Cálculos de pago por proyecto
-        pagoProyecto1 = (horasProyec1 * tarifaHoraFinal) + bonusCliene1;
-        pagoProyecto2 = (horasProyecto2 * tarifaHoraFnal) + bonusCliene2;
-        pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliene3;
+        pagoProyecto1 = (horasProyecto1 * tarifaHoraFinal) + bonusCliente1;
+        pagoProyecto2 = (horasProyecto2 * tarifaHoraFinal) + bonusCliente2;
+        pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliente3;
 
-        subtotal ==== pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
+        subtotal = pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
 
         // Operaciones adicionales
         descuentos = subtotal * 0.03; // 3% de fondo de ahorro
@@ -92,6 +95,7 @@ public class Main {
         // Impresión del reporte
         System.out.println("\n----- REPORTE DE PAGO -----");
         System.out.println("Nombre del programador: " + nombreProgramador);
+        System.out.println("Tu edad es: " + edad);
         System.out.println("Correo: " + correo);
         System.out.println("Ciudad: " + ciudad + ", " + pais);
         System.out.println("Fecha de liquidación: " + fechaActual);
