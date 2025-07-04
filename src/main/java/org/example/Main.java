@@ -1,31 +1,31 @@
 package org.example;
 
-import java.util.Scanner;
-import  java.time.LocalDate;
+import java.util.Scanner; // Se realiza Importación de Scanner
+import  java.time.LocalDate; // Se realiza Importación de LocalDate
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // Coreccion de sintaxis, mayusculas y se agrega in
 
         // Información general
         String nombreProgramador, correo, ciudad, pais, tipoContrato, nivelExperiencia, cliente1, cliente2, cliente3;
-        int edad, aniosExperiencia;
+        int edad, anosExperiencia; // Coreccion de sintaxis, ortografía
         double tarifaBase, tarifaNivel, tarifaExperiencia;
 
         // Entrada de información general
         System.out.print("Ingrese el nombre del programador: ");
-        nombreProgramador = sc.nextLine();
+        nombreProgramador = sc.nextLine(); // corección sintaxis, ;
 
-        System.out.print("Ingrese el correo electrónico: ");
-        correo = sc.nextLine();
+        System.out.print("Ingrese el correo electrónico: "); // corección sintaxis, ;
+        correo = sc.nextLine(); // corección sintaxis, Scanner por sc
 
         System.out.print("Ingrese la ciudad: ");
-        ciudad = sc.nextLine();
+        ciudad = sc.nextLine(); //corección sintaxis, leer por sc
 
-        System.out.print("Ingrese el país: ");
+        System.out.print("Ingrese el país: "); // corección sintaxis, ;
         pais = sc.nextLine();
 
-        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): ");
+        System.out.print("Ingrese el tipo de contrato (Fulltime/Parttime/Freelance): "); // corección sintaxis, ;
         tipoContrato = sc.nextLine();
 
         System.out.print("Ingrese el nivel de experiencia (Junior/Senior): ");
@@ -35,12 +35,12 @@ public class Main {
         edad = sc.nextInt();
 
         System.out.print("Ingrese los años de experiencia: ");
-        aniosExperiencia = sc.nextInt();
+        anosExperiencia = sc.nextInt(); // corección ortografía
 
         // Ajuste de tarifa según experiencia
-        tarifaBase = 50.00; // base por hora
+        tarifaBase = 50.00; // base por hora, coreccion sintaxi, se debe utilizar punto (.)
         tarifaNivel = (nivelExperiencia.equalsIgnoreCase("Senior")) ? 20 : 0;
-        tarifaExperiencia = aniosExperiencia * 1.5;
+        tarifaExperiencia = anosExperiencia * 1.5;
         double tarifaHoraFinal = tarifaBase + tarifaNivel + tarifaExperiencia;
 
         System.out.println("\nTarifa final por hora calculada: $" + tarifaHoraFinal);
@@ -48,31 +48,31 @@ public class Main {
         // Información de proyectos
         System.out.println("\nIngrese los nombres de los 3 clientes:");
         sc.nextLine(); // limpiar buffer
-        System.out.println("Cliente 1: ");
-        cliente1 = sc.next();
-        System.out.println("Cliente 2: ");
-        cliente2 = sc.next();
-        System.out.println("Cliente 3: ");
-        cliente3 = sc.next();
+        System.out.print("Cliente 1: "); //corección sintaxis, ;
+        cliente1 = sc.nextLine(); //corección sintaxis, nex por nextLine
+        System.out.print("Cliente 2: "); //corección sintaxis, ;
+        cliente2 = sc.nextLine();  //corección sintaxis, next por nextLine
+        System.out.println("Cliente 3: "); //corección sintaxis, ;
+        cliente3 = sc.nextLine(); //corección sintaxis, nex por nextLine
 
-        int horasProyecto1 = 10, horasProyecto2 = 8, horasProyecto3 = 20;
+        int horasProyecto1 , horasProyecto2 , horasProyecto3 ; //
         double bonusCliente1, bonusCliente2, bonusCliente3;
         double pagoProyecto1, pagoProyecto2, pagoProyecto3;
         double subtotal, descuentos, impuestos, totalFinal;
 
         // Captura de horas
         System.out.print("Horas trabajadas para " + cliente1 + ": ");
-        //horasProyecto1 = sc.nextInt();
+        horasProyecto1 = sc.nextInt(); // se sacan de cometarios para que puedan ser utilizadas correctamente
         System.out.print("Bono adicional para " + cliente1 + ": ");
         bonusCliente1 = sc.nextDouble();
 
         System.out.print("Horas trabajadas para " + cliente2 + ": ");
-        //horasProyecto2 = sc.nextInt();
+        horasProyecto2 = sc.nextInt(); //se sacan de cometarios para que puedan ser utilizadas correctamente
         System.out.print("Bono adicional para " + cliente2 + ": ");
         bonusCliente2 = sc.nextDouble();
 
         System.out.print("Horas trabajadas para " + cliente3 + ": ");
-        //horasProyecto3 = sc.nextInt();
+        horasProyecto3 = sc.nextInt(); //se sacan de cometarios para que pue
         System.out.print("Bono adicional para " + cliente3 + ": ");
         bonusCliente3 = sc.nextDouble();
 
@@ -81,7 +81,7 @@ public class Main {
         pagoProyecto2 = (horasProyecto2 * tarifaHoraFinal) + bonusCliente2;
         pagoProyecto3 = (horasProyecto3 * tarifaHoraFinal) + bonusCliente3;
 
-        subtotal = pagoProyecto1 + pagoProyecto2 + pagoProyecto3;
+        subtotal = pagoProyecto1 + pagoProyecto2 + pagoProyecto3; // correción de sintaxis, ==== por =
 
         // Operaciones adicionales
         descuentos = subtotal * 0.03; // 3% de fondo de ahorro
@@ -90,7 +90,7 @@ public class Main {
         totalFinal = subtotal - descuentos - impuestos;
 
         // Captura fecha actual
-        LocalDate fechaActual = LocalDate.now();
+        LocalDate fechaActual = LocalDate.now(); // se importa el LocalDate
 
         // Impresión del reporte
         System.out.println("\n----- REPORTE DE PAGO -----");
